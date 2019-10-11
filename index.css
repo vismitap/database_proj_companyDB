@@ -1,171 +1,50 @@
- a{
-            text-decoration: none;
-        }
-        a:hover{
-            color: mediumvioletred;
-            font-size: 40px;
-        }
-        ul{
-            list-style-type: none;
-        }
-        body{
-            background-color: skyblue;
-            z-index: 110;
-        }
-        
-        .bg-modal1{
-            width: 100%;
-            height: 100%;
-            background-color: skyblue;
-            opacity: 1;
-            position: absolute;
-            top: 0;
-            display: flex;
-            justify-content: center;
-            z-index: 60;
-            padding-top: 90px;
-        }
-        .bg-modal2{
-            width: 100%;
-            height: 100%;
-            background-color: skyblue;
-            opacity: 1;
-            position: absolute;
-            top: 0;
-            display: flex;
-            justify-content: center;
-            z-index: 60;
-            padding-top: 90px;
-        }
-        .bg-modal3{
-            width: 100%;
-            height: 100%;
-            background-color: skyblue;
-            opacity: 1;
-            position: absolute;
-            top: 0;
-            display: flex;
-            justify-content: center;
-            z-index: 60;
-            padding-top: 90px;
-        }
-        .bg-modal4{
-            width: 100%;
-            height: 100%;
-            background-color: skyblue;
-            opacity: 1;
-            position: absolute;
-            top: 0;
-            display: flex;
-            justify-content: center;
-            z-index: 60;
-            padding-top: 90px;
-        }
-        .bg-modal5{
-            width: 100%;
-            height: 100%;
-            background-color: skyblue;
-            opacity: 1;
-            position: absolute;
-            top: 0;
-            display: flex;
-            justify-content: center;
-            z-index: 60;
-            padding-top: 90px;
-        }
-        
-        
-        .modal-content1{
-            height: 400px;
-            width: 500px;
-            background-color: white;
-            opacity: 1;
-            z-index: 100;
-            align-content: center;
-            justify-content: center;
-            text-align: center;
-            
-        }
-          .modal-content2{
-            height: 400px;
-            width: 500px;
-            background-color: white;
-            opacity: 1;
-            z-index: 100;
-            align-content: center;
-            justify-content: center;
-            text-align: center;
-            
-        }
-        .modal-content3{
-            height: 400px;
-            width: 500px;
-            background-color: white;
-            opacity: 1;
-            z-index: 100;
-            align-content: center;
-            justify-content: center;
-            text-align: center;
-            
-        }
-        .modal-content4{
-            height: 400px;
-            width: 500px;
-            background-color: white;
-            opacity: 1;
-            z-index: 100;
-            align-content: center;
-            justify-content: center;
-            text-align: center;
-            
-            
-        }
-        .modal-content5{
-            height: 400px;
-            width: 500px;
-            background-color: white;
-            opacity: 1;
-            z-index: 100;
-            align-content: center;
-            justify-content: center;
-            text-align: center;
-        
-            
-            
-        }
-        .close1{
-            margin-left: 470px;
-            align-items: flex-end;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-            }
-         .close2{
-            margin-left: 470px;
-            align-items: flex-end;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-            }
-     .close3{
-            margin-left: 470px;
-            align-items: flex-end;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-            }
-     .close4{
-            margin-left: 470px;
-            align-items: flex-end;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-            }
-     .close5{
-            margin-left: 470px;
-            align-items: flex-end;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-            }
-    
+ a {
+ 	text-decoration: none;
+ }
+
+ a:hover {
+ 	color: mediumvioletred;
+ 	font-size: 40px;
+ }
+
+ ul {
+ 	list-style-type: none;
+ }
+
+ body {
+ 	background-color: skyblue;
+ 	z-index: 110;
+ }
+
+ .bg-modal {
+ 	width: 100%;
+ 	height: 100%;
+ 	background-color: rgba(88, 88, 88, 0.52);
+ 	opacity: 1;
+ 	position: absolute;
+ 	top: 0;
+ 	display: none;
+ 	justify-content: center;
+ 	z-index: 60;
+ 	padding-top: 90px;
+ }
+
+ .modal-content {
+ 	height: 400px;
+ 	width: 500px;
+ 	background-color: white;
+ 	opacity: 1;
+ 	z-index: 100;
+ 	align-content: center;
+ 	justify-content: center;
+ 	text-align: center;
+
+ }
+
+ .close {
+ 	margin-left: 470px;
+ 	align-items: flex-end;
+ 	display: flex;
+ 	flex-direction: row;
+ 	justify-content: flex-end;
+ }
