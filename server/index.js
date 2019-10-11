@@ -4,18 +4,20 @@ const port = process.env.PORT;
 
 const sequelize = require('./db');
 
+const routes = require('./routes');
+
 app.use((req, res, next) => {
     //TODO: Make Logger
     next();
 });
 
-const {Company} = require('./Models');
+Object.keys(routes).forEach(route => {
+    console.log(route, routes[route]);
+    app.use(`/api/${route}`, routes[route])
+});
 
 app.get('/', async (req, res) => {
-    Company.findAll().then(companies => {
-        console.log(companies[0].dataValues)
-    });
-    return res.status(200).send({hello: 'world'});
+    return res.status(200).json({hello: 'world'});
 });
 
 sequelize.sync().then(() => {

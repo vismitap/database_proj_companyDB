@@ -1,4 +1,6 @@
-module.exports = function (sequelize, DataTypes) {
+/* jshint indent: 2 */
+
+module.exports = function(sequelize, DataTypes) {
   return sequelize.define('project', {
     NAME: {
       type: DataTypes.STRING(50),

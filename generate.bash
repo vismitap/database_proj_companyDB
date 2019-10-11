@@ -1,0 +1,1 @@
+sequelize-auto -h localhost -d company_db -u server -x Ax5rCkVjlKklDWdh -e mysql
