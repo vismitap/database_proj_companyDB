@@ -10,9 +10,10 @@ const port = process.env.PORT;
 const publicDirectory = path.join(__dirname, '..', 'public');
 
 
+app.use(express.json());
 app.use(express.static(publicDirectory));
 app.use((req, res, next) => {
-    //TODO: Make Logger
+    console.log(`[${req.method}] ${req.url}`);
     next();
 });
 

@@ -12,6 +12,7 @@
       <h1 style="color:darkgreen">Welcome to our database webpage!</h1>
       <h3 style="color: darkred">What exactly in the database would u like to access?</h3>
       <ul>
+        <li><a href="#" id="comp">Company</a></li><br>
         <li><a href="#" id="emp">Employee</a></li><br>
         <li><a href="#" id="proj">Project</a></li><br>
         <li><a href="#" id=dept>Department</a></li><br>
@@ -22,21 +23,35 @@
     </center>
   </div>
 
+  <div class="bg-modal" id="m0">
+    <div class="modal-content">
+      <i class="close fas fa-times" id="c0" style="height: 30px; width: 30px"></i>
+
+      <form id="comp-f">
+        <label>Enter Company Name: </label> <input required name="NAME" type="text" placeholder="E.g Microsoft"><br><br>
+        <label>Enter Company SS_NO: </label><input required name="SS_NO" type="number" placeholder="E.g 100"> <br><br>
+        <label>Enter Company LOCATION: </label><input required name="LOCATION" type="text" placeholder="Eg. Palo Alto"><br><br>
+        <button>Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="reset" value="Reset">
+      </form>
+    </div>
+  </div>
+
   <div class="bg-modal" id="m1">
     <div class="modal-content">
       <i class="close fas fa-times" id="c1" style="height: 30px; width: 30px"></i>
 
-      <form action="/employee" method="POST">
-        <label>Enter Employee First-Name: </label> <input type="text" placeholder="First-name"><br><br>
-        <label>Enter Employee Mid-Name: </label><input type="text" placeholder="Mid-name"> <br><br>
-        <label>Enter Employee Last-Name: </label><input type="text" placeholder="Last-name"><br><br>
-        <label>Enter Employee Gender: </label><input type="radio" name="1"><label>Male</label>
-        <input type="radio" name="1"><label>Female</label><br><br>
-        <label>Enter Employee ID: </label><input type="text" placeholder="ID"><br><br>
-        <label>Enter Employee Salary: </label><input type="number" placeholder="Salary"><br><br>
-        <label>Enter Employee Address: </label><input type="text" placeholder="Address"><br><br>
+      <form id="emp-f">
+        <label>Enter Employee Full Name: </label> <input required name="NAME" type="text" placeholder="E.g Satya Nadella"><br><br>
+        <label>Enter Employee Gender: </label><input required type="radio" value="Male" name="GENDER"><label>Male</label>
+        <input type="radio" value="Female" name="GENDER"><label>Female</label><br><br>
+        <label>Enter Employee ID: </label><input name="ID" required type="number" placeholder="ID"><br><br>
+        <label>Enter Employee Salary: </label><input name="SALARY" required type="number" placeholder="Salary"><br><br>
+        <label>Enter Employee Address: </label><textarea required name="ADDRESS" placeholder="Full address of employee."></textarea><br><br>
+        <label>Enter Company SS_NO: </label><input required name="SS_NO" type="number" placeholder="E.g 100"> <br><br>
+        <label>Enter Currently Assigned Project Number: </label><input name="PROJECT" required type="number" placeholder="E.g 2505"> <br><br>
         <button>Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <button>Reset</button>
+        <input type="reset" value="Reset">
       </form>
     </div>
   </div>
@@ -46,12 +61,14 @@
     <div class="modal-content">
       <i class="close fas fa-times" id="c2" style="height: 30px; width: 30px" id="c2"
         style="height: 30px; width: 30px"></i>
-      <form id="project.html">
-        <label>Enter Project Name: </label> <input type="text" placeholder="Project-Name"><br><br>
-        <label>Enter Project Number: </label><input type="number" placeholder="Project-Number"> <br><br>
-        <label>Enter Project Location: </label><input type="text" placeholder="Project-Location"><br><br>
+      <form id="proj-f">
+        <label>Enter Project Name: </label> <input name="NAME" required type="text" placeholder="E.g Holo Lens"><br><br>
+        <label>Enter Project Number: </label><input name="NUMBER" required type="number" placeholder="E.g 2505"> <br><br>
+        <label>Enter Project Location: </label><input name="LOCATION" required type="text" placeholder="E.g HQ"><br><br>
+        <label>Enter Company SS_NO: </label><input name="SS_NO" required type="number" placeholder="Company No."><br><br>
+        <label>Enter Department Number: </label><input name="DEPARTMENT" required type="number" placeholder="Dept No."><br><br>
         <button>Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <button>Reset</button>
+        <input type="reset" value="Reset">
       </form>
     </div>
   </div>
@@ -61,16 +78,16 @@
     <div class="modal-content">
       <i class="close fas fa-times" id="c3" style="height: 30px; width: 30px" id="c3"
         style="height: 30px; width: 30px"></i>
-      <form>
-        <label>Enter Dependent Name: </label> <input type="text" placeholder="Name"><br><br>
-        <label>Enter Employee Gender: </label><input type="radio" name="1"><label>Male</label>
-        <input type="radio" name="1"><label>Female</label><br><br>
-        <label>Enter Dependent Relation: </label><input type="text" placeholder="Relation"><br><br>
-        <label>Enter Dependent Age: </label><input type="number" placeholder="Age"><br><br>
-        <label>Name of the employee the dependant is related to: </label><input type="text"
-          placeholder="Employee name"><br><br>
+      <form id="dependent-f">
+        <label>Enter Dependent Name: </label> <input required type="text" name="NAME" placeholder="E.g Anupama Nadella"><br><br>
+        <label>Enter Dependent Gender: </label><input required type="radio" value="Male" name="GENDER"><label>Male</label>
+        <input type="radio" value="Female" name="GENDER"><label>Female</label><br><br>
+        <label>Enter Dependent Relation: </label><input required name="RELATION" type="text" placeholder="Relation"><br><br>
+        <label>Enter Dependent Date of Birth: </label><input required name="BIRTH_DATE" type="date" placeholder="Choose a date"><br><br>
+        <label>ID of the employee who the dependant is related to: </label><input required type="number"
+        name="EMPLOYEE"  placeholder="Employee ID"><br><br>
         <button>Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <button>Reset</button>
+        <input type="reset" value="Reset">
       </form>
     </div>
   </div>
@@ -81,19 +98,18 @@
     <div class="modal-content">
       <i class="close fas fa-times" id="c4" style="height: 30px; width: 30px" id="c4"
         style="height: 30px; width: 30px"></i>
-      <form id="manager.html">
-        <label>Enter Manager Name: </label> <input type="text" placeholder="Name"><br><br>
-        <label>Enter Employee Gender: </label><input type="radio" name="1"><label>Male</label>
-        <input type="radio" name="1"><label>Female</label><br><br>
-        <label>Enter Department Name: </label><input type="text" placeholder="Department name"><br><br>
-        <label>Enter Manager Age: </label><input type="number" placeholder="Age"><br><br>
-        <label>Enter Manager Salary: </label><input type="number" placeholder="Salary"><br><br>
-        <label>Enter Manager Address: </label><input type="text" placeholder="Address"><br><br>
-        <label>Enter Manager ID: </label><input type="number" placeholder="ID"><br><br>
+      <form id="manager-f">
+        <label>Enter Manager Name: </label> <input required name="NAME" type="text" placeholder="Name"><br><br>
+        <label>Enter Manager ID: </label><input required name="ID" type="number" placeholder="ID"><br><br>
+        <label>Enter Employee Gender: </label><input required type="radio" value="Male" name="GENDER"><label>Male</label>
+        <input type="radio" value="Female" name="GENDER"><label>Female</label><br><br>
+        <label>Enter Department ID: </label><input required name="DEPARTMENT" type="number" placeholder="Department ID"><br><br>
+        <label>Enter Manager Salary: </label><input required name="SALARY" type="number" placeholder="Salary"><br><br>
+        <label>Enter Manager Address: </label><textarea required name="ADDRESS" placeholder="Full address of manager."></textarea><br><br>
+        <label>Enter Currently Assigned Project Number: </label><input name="PROJECT" required type="number" placeholder="E.g 2505"> <br><br>
+
         <button>Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <button>Reset</button>
-
-
+        <input type="reset" value="Reset">
       </form>
 
     </div>
@@ -103,12 +119,13 @@
     <div class="modal-content">
       <i class="close fas fa-times" id="c5" style="height: 30px; width: 30px" id="c5"
         style="height: 30px; width: 30px"></i>
-      <form id="department.html">
-        <label>Enter Department Name: </label> <input type="text" placeholder="Name"><br><br>
-        <label>Enter Department Location: </label><input type="text" placeholder="Gender"> <br><br>
-        <label>Enter Department ID: </label><input type="text" placeholder="Relation"><br><br>
+      <form id="dept-f">
+        <label>Enter Department Name: </label> <input required name="NAME" type="text" placeholder="E.g Research and Development"><br><br>
+        <label>Enter Department Location: </label><input required name="LOCATION" type="text" placeholder="E.g Second Floor"> <br><br>
+        <label>Enter Department ID: </label><input required name="NUMBER" type="number" placeholder="Dept. Number"><br><br>
+        <label>Enter Company SS_NO: </label> <input required name="COMPANY" type="number" placeholder="Company SS_NO"><br><br>
         <button>Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <button>Reset</button>
+        <input type="reset" value="Reset">
 
       </form>
 
