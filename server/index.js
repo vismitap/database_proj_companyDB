@@ -1,11 +1,16 @@
+const path = require('path');
 const express = require('express');
 const app = express();
-const port = process.env.PORT;
 
 const sequelize = require('./db');
-
 const routes = require('./routes');
 
+const port = process.env.PORT;
+
+const publicDirectory = path.join(__dirname, '..', 'public');
+
+
+app.use(express.static(publicDirectory));
 app.use((req, res, next) => {
     //TODO: Make Logger
     next();
@@ -13,11 +18,11 @@ app.use((req, res, next) => {
 
 Object.keys(routes).forEach(route => {
     console.log(route, routes[route]);
-    app.use(`/api/${route}`, routes[route])
+    app.use(`/${route}`, routes[route])
 });
 
 app.get('/', async (req, res) => {
-    return res.status(200).json({hello: 'world'});
+    return res.status(200).render('index');
 });
 
 sequelize.sync().then(() => {
