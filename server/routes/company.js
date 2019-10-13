@@ -13,4 +13,12 @@ router.get('/', async (req, res) => {
     }
 }); 
 
+router.post('/', async (req, res) => {
+    try {
+        console.log(req.body);
+    } catch(e) {
+        return res.status(500).send({error: 'Unexpected Error.'});
+    }
+});
+
 module.exports = router;
