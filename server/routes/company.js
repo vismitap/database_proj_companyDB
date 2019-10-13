@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-const {company} = require('../Models');
+const {company: Company} = require('../Models');
 
 router.get('/', async (req, res) => {
     try {
-        const companies = await company.findAll({});
+        const companies = await Company.findAll({});
         return res.json(companies);
 
     } catch(e) {
@@ -15,9 +15,11 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res) => {
     try {
-        console.log(req.body);
-    } catch(e) {
-        return res.status(500).send({error: 'Unexpected Error.'});
+        const company = await Company.create(req.body);
+        return res.status(200).send({result: 'success', company});
+    } catch(error) {
+        console.log(error);
+        return res.status(500).send({error});
     }
 });
 
