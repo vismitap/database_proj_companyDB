@@ -1,113 +1,124 @@
 <html>
-    <head><title>Database</title></head>
-    <link href="index.css" rel="stylesheet" type="text/css">
-    <script src="https://kit.fontawesome.com/c7bc77920e.js" crossorigin="anonymous"></script>
-    <body>
-            <div><center><h1 style="color:darkgreen">Welcome to our database webpage!</h1>
-        <h3 style="color: darkred">What exactly in the database would u like to access?</h3>
-        <ul>
-            <li><a href="#" id="emp">Employee</a></li><br>
-            <li><a href="#" id="proj">Project</a></li><br>
-            <li><a href="#" id=dept>Department</a></li><br>
-            <li><a href="#" id="man">Manager</a></li><br>
-           <li><a href="#" id="dep">Dependent</a></li><br>
 
-        </ul>
-    </center></div>
-      
-       <div class="bg-modal" id="m1">
-        <div class="modal-content">
-            <i class="close fas fa-times" id="c1" style="height: 30px; width: 30px" ></i>
+<head>
+  <title>Database</title>
+</head>
+<link href="index.css" rel="stylesheet" type="text/css">
+<script src="https://kit.fontawesome.com/c7bc77920e.js" crossorigin="anonymous"></script>
 
-           <form>
-             <label>Enter Employee First-Name: </label> <input type="text" placeholder="First-name"><br><br>
-             <label>Enter Employee Mid-Name: </label><input type="text" placeholder="Mid-name"> <br><br>
-             <label>Enter Employee Last-Name: </label><input type="text" placeholder="Last-name"><br><br>
-             <label>Enter Employee Gender:   </label><input type="radio"  name="1"><label>Male</label>
-               <input type="radio" name="1"><label>Female</label><br><br>
-             <label>Enter Employee ID: </label><input type="text" placeholder="ID"><br><br>
-             <label>Enter Employee Salary: </label><input type="number" placeholder="Salary"><br><br>
-             <label>Enter Employee Address: </label><input type="text" placeholder="Address"><br><br>
-               <button>Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button>Reset</button>
-        
-    </form>  
-        </div>
+<body>
+  <div>
+    <center>
+      <h1 style="color:darkgreen">Welcome to our database webpage!</h1>
+      <h3 style="color: darkred">What exactly in the database would u like to access?</h3>
+      <ul>
+        <li><a href="#" id="emp">Employee</a></li><br>
+        <li><a href="#" id="proj">Project</a></li><br>
+        <li><a href="#" id=dept>Department</a></li><br>
+        <li><a href="#" id="man">Manager</a></li><br>
+        <li><a href="#" id="dep">Dependent</a></li><br>
+
+      </ul>
+    </center>
+  </div>
+
+  <div class="bg-modal" id="m1">
+    <div class="modal-content">
+      <i class="close fas fa-times" id="c1" style="height: 30px; width: 30px"></i>
+
+      <form action="/employee" method="POST">
+        <label>Enter Employee First-Name: </label> <input type="text" placeholder="First-name"><br><br>
+        <label>Enter Employee Mid-Name: </label><input type="text" placeholder="Mid-name"> <br><br>
+        <label>Enter Employee Last-Name: </label><input type="text" placeholder="Last-name"><br><br>
+        <label>Enter Employee Gender: </label><input type="radio" name="1"><label>Male</label>
+        <input type="radio" name="1"><label>Female</label><br><br>
+        <label>Enter Employee ID: </label><input type="text" placeholder="ID"><br><br>
+        <label>Enter Employee Salary: </label><input type="number" placeholder="Salary"><br><br>
+        <label>Enter Employee Address: </label><input type="text" placeholder="Address"><br><br>
+        <button>Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button>Reset</button>
+      </form>
     </div>
-        
-     
-          <div class="bg-modal" id="m2">
-        <div class="modal-content">
-            <i class="close fas fa-times" id="c2" style="height: 30px; width: 30px" id="c2" style="height: 30px; width: 30px"></i>
-            <form id="project.html">
-             <label>Enter Project Name: </label> <input type="text" placeholder="Project-Name"><br><br>
-             <label>Enter Project Number: </label><input type="number" placeholder="Project-Number"> <br><br>
-             <label>Enter Project Location: </label><input type="text" placeholder="Project-Location"><br><br>
-            <button>Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button>Reset</button>
-        </form>
-     </div>
+  </div>
+
+
+  <div class="bg-modal" id="m2">
+    <div class="modal-content">
+      <i class="close fas fa-times" id="c2" style="height: 30px; width: 30px" id="c2"
+        style="height: 30px; width: 30px"></i>
+      <form id="project.html">
+        <label>Enter Project Name: </label> <input type="text" placeholder="Project-Name"><br><br>
+        <label>Enter Project Number: </label><input type="number" placeholder="Project-Number"> <br><br>
+        <label>Enter Project Location: </label><input type="text" placeholder="Project-Location"><br><br>
+        <button>Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button>Reset</button>
+      </form>
     </div>
-     
-        
-          <div class="bg-modal" id="m3">
-        <div class="modal-content">
-            <i class="close fas fa-times" id="c3" style="height: 30px; width: 30px" id="c3" style="height: 30px; width: 30px"></i>
-             <form>
-             <label>Enter Dependent Name: </label> <input type="text" placeholder="Name"><br><br>
-              <label>Enter Employee Gender:   </label><input type="radio"  name="1"><label>Male</label>
-               <input type="radio" name="1"><label>Female</label><br><br>
-                        <label>Enter Dependent Relation: </label><input type="text" placeholder="Relation"><br><br>
-             <label>Enter Dependent Age: </label><input type="number" placeholder="Age"><br><br>
-             <label>Name of the employee the dependant is related to: </label><input type="text" placeholder="Employee name"><br><br>
-            <button>Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button>Reset</button>
-        </form>
-      </div>
+  </div>
+
+
+  <div class="bg-modal" id="m3">
+    <div class="modal-content">
+      <i class="close fas fa-times" id="c3" style="height: 30px; width: 30px" id="c3"
+        style="height: 30px; width: 30px"></i>
+      <form>
+        <label>Enter Dependent Name: </label> <input type="text" placeholder="Name"><br><br>
+        <label>Enter Employee Gender: </label><input type="radio" name="1"><label>Male</label>
+        <input type="radio" name="1"><label>Female</label><br><br>
+        <label>Enter Dependent Relation: </label><input type="text" placeholder="Relation"><br><br>
+        <label>Enter Dependent Age: </label><input type="number" placeholder="Age"><br><br>
+        <label>Name of the employee the dependant is related to: </label><input type="text"
+          placeholder="Employee name"><br><br>
+        <button>Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button>Reset</button>
+      </form>
     </div>
-   
-        
-        
-        <div class="bg-modal" id="m4">
-        <div class="modal-content">
-            <i class="close fas fa-times" id="c4" style="height: 30px; width: 30px" id="c4" style="height: 30px; width: 30px"></i>
-             <form id="manager.html">
-             <label>Enter Manager Name: </label> <input type="text" placeholder="Name"><br><br>
-              <label>Enter Employee Gender:   </label><input type="radio"  name="1"><label>Male</label>
-               <input type="radio" name="1"><label>Female</label><br><br>
-             <label>Enter Department Name: </label><input type="text" placeholder="Department name"><br><br>
-             <label>Enter Manager Age: </label><input type="number" placeholder="Age"><br><br>
-             <label>Enter Manager Salary: </label><input type="number" placeholder="Salary"><br><br>
-             <label>Enter Manager Address: </label><input type="text" placeholder="Address"><br><br>
-             <label>Enter Manager ID: </label><input type="number" placeholder="ID"><br><br>
-            <button>Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button>Reset</button>
-        
-            
-        </form>
-       
-      </div>
+  </div>
+
+
+
+  <div class="bg-modal" id="m4">
+    <div class="modal-content">
+      <i class="close fas fa-times" id="c4" style="height: 30px; width: 30px" id="c4"
+        style="height: 30px; width: 30px"></i>
+      <form id="manager.html">
+        <label>Enter Manager Name: </label> <input type="text" placeholder="Name"><br><br>
+        <label>Enter Employee Gender: </label><input type="radio" name="1"><label>Male</label>
+        <input type="radio" name="1"><label>Female</label><br><br>
+        <label>Enter Department Name: </label><input type="text" placeholder="Department name"><br><br>
+        <label>Enter Manager Age: </label><input type="number" placeholder="Age"><br><br>
+        <label>Enter Manager Salary: </label><input type="number" placeholder="Salary"><br><br>
+        <label>Enter Manager Address: </label><input type="text" placeholder="Address"><br><br>
+        <label>Enter Manager ID: </label><input type="number" placeholder="ID"><br><br>
+        <button>Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button>Reset</button>
+
+
+      </form>
+
     </div>
-   
-         <div class="bg-modal" id="m5">
-        <div class="modal-content">
-            <i class="close fas fa-times" id="c5" style="height: 30px; width: 30px" id="c5" style="height: 30px; width: 30px"></i>
-              <form id="department.html">
-             <label>Enter Department Name: </label> <input type="text" placeholder="Name"><br><br>
-             <label>Enter Department Location: </label><input type="text" placeholder="Gender"> <br><br>
-             <label>Enter Department ID: </label><input type="text" placeholder="Relation"><br><br>
-            <button>Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button>Reset</button>
-        
-             </form>
-     
-             
-        </div>
+  </div>
+
+  <div class="bg-modal" id="m5">
+    <div class="modal-content">
+      <i class="close fas fa-times" id="c5" style="height: 30px; width: 30px" id="c5"
+        style="height: 30px; width: 30px"></i>
+      <form id="department.html">
+        <label>Enter Department Name: </label> <input type="text" placeholder="Name"><br><br>
+        <label>Enter Department Location: </label><input type="text" placeholder="Gender"> <br><br>
+        <label>Enter Department ID: </label><input type="text" placeholder="Relation"><br><br>
+        <button>Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button>Reset</button>
+
+      </form>
+
+
     </div>
-    
-        
-      
-        <script type="text/javascript" src="index.js"></script>
-    </body>
-    
+  </div>
+
+
+
+  <script type="text/javascript" src="index.js"></script>
+</body>
+
 </html>
