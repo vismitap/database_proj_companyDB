@@ -16,8 +16,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     RELATION: {
       type: DataTypes.STRING(50),
-      allowNull: false,
-      primaryKey: true
+      allowNull: false
     },
     EMPLOYEE: {
       type: DataTypes.INTEGER(11),
