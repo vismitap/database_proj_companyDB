@@ -25,6 +25,12 @@ module.exports = function(sequelize, DataTypes) {
         model: 'employee',
         key: 'ID'
       }
+    },
+    ID: {
+      type: DataTypes.INTEGER(11),
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true
     }
   }, {
     tableName: 'dependent'

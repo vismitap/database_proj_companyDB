@@ -1,9 +1,10 @@
 const closeBtns = document.querySelectorAll(".close");
+
 closeBtns.forEach(close => {
-    const id = close.id.split('')[1];
+    const id = close.id.split(/[A-Za-z]/)[1];
     console.log(close.id, `#m${id}`)
     close.addEventListener('click', () => {
-        console.log("clicked");
+        console.log("clicked", close.id);
         document.querySelector(`#m${id}`).style.display = 'none';
     });
 })
@@ -21,6 +22,11 @@ const postWrapper = async (url, body) => {
     return json;
 }
 
+const getWrapper = async url => {
+    const response = await fetch(url);
+    const json = await response.json();
+    return json;
+}
 
 document.getElementById("comp").addEventListener("click", function () {
     document.querySelector('#m0').style.display = 'flex';
@@ -48,6 +54,126 @@ document.getElementById("man").addEventListener("click", function () {
 
 document.getElementById("dept").addEventListener("click", function () {
     document.querySelector('#m5').style.display = 'flex';
+});
+
+
+document.getElementById("compv").addEventListener("click", async function () {
+    document.querySelector('#m6').style.display = 'flex';
+    const tbody = document.querySelector("#m6 table tbody");
+    let result = await getWrapper('/company');
+    let inner = '';
+    result.forEach(company => {
+        inner += `
+            <tr>
+                <td>${company.SS_NO}</td>
+                <td>${company.NAME}</td>
+                <td>${company.LOCATION}</td>
+            </tr>
+        `
+    });
+    tbody.innerHTML = inner;
+});
+
+document.getElementById("empv").addEventListener("click", async function () {
+    document.querySelector('#m7').style.display = 'flex';
+    const tbody = document.querySelector("#m7 table tbody");
+    let result = await getWrapper('/employee');
+    let inner = '';
+    result.forEach(employee => {
+        inner += `
+            <tr>
+                <td>${employee.ID}</td>
+                <td>${employee.NAME}</td>
+                <td>${employee.GENDER}</td>
+                <td>${employee.SALARY}</td>
+                <td>${employee.ADDRESS}</td>
+                <td>${employee.SS_NO}</td>
+                <td>${employee.PROJECT}</td>
+            </tr>
+        `
+    });
+    tbody.innerHTML = inner;
+});
+
+
+document.getElementById("projv").addEventListener("click", async function () {
+    document.querySelector('#m8').style.display = 'flex';
+    const tbody = document.querySelector("#m8 table tbody");
+    let result = await getWrapper('/project');
+    let inner = '';
+    result.forEach(project => {
+        inner += `
+            <tr>
+                <td>${project.NUMBER}</td>
+                <td>${project.NAME}</td>
+                <td>${project.LOCATION}</td>
+                <td>${project.DEPARTMENT}</td>
+                <td>${project.SS_NO}</td>
+            </tr>
+        `
+    });
+    tbody.innerHTML = inner;
+});
+
+
+document.getElementById("deptv").addEventListener("click", async function () {
+    document.querySelector('#m9').style.display = 'flex';
+    const tbody = document.querySelector("#m9 table tbody");
+    let result = await getWrapper('/department');
+    let inner = '';
+    result.forEach(department => {
+        inner += `
+            <tr>
+                <td>${department.NUMBER}</td>
+                <td>${department.NAME}</td>
+                <td>${department.LOCATION}</td>
+                <td>${department.COMPANY}</td>
+            </tr>
+        `
+    });
+    tbody.innerHTML = inner;
+});
+
+
+document.getElementById("manv").addEventListener("click", async function () {
+    document.querySelector('#m10').style.display = 'flex';
+    const tbody = document.querySelector("#m10 table tbody");
+    let result = await getWrapper('/manager');
+    let inner = '';
+    result.forEach(manager => {
+        inner += `
+            <tr>
+                <td>${manager.ID}</td>
+                <td>${manager.NAME}</td>
+                <td>${manager.GENDER}</td>
+                <td>${manager.SALARY}</td>
+                <td>${manager.ADDRESS}</td>
+                <td>${manager.DEPARTMENT}</td>
+                <td>${manager.PROJECT}</td>
+            </tr>
+        `
+    });
+    tbody.innerHTML = inner;
+});
+
+
+document.getElementById("depv").addEventListener("click", async function () {
+    document.querySelector('#m11').style.display = 'flex';
+    const tbody = document.querySelector("#m11 table tbody");
+    let result = await getWrapper('/dependent');
+    let inner = '';
+    result.forEach(dependent => {
+        inner += `
+            <tr>
+                <td>${dependent.NAME}</td>
+                <td>${dependent.GENDER}</td>
+                <td>${dependent.BIRTH_DATE}</td>
+                <td>${dependent.RELATION}</td>
+                <td>${dependent.EMPLOYEE}</td>
+            </tr>
+        `
+    });
+    tbody.innerHTML = inner;
 });
 
 
